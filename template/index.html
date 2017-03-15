@@ -1,0 +1,151 @@
+{%extends "base.html" %}
+{%load markup%}
+{%block title%}Welcome{%endblock%}
+{%block layoutblock%}
+
+        <!-- One -->
+            <section id="one" class="wrapper">
+                <div class="inner">
+                    <div class="flex flex-3">
+                        <article>
+                            <header>
+                                <h3>who we are</h3>
+                            </header>
+                            <p>
+                                The United States PostgreSQL Association affectionately known as PgUS is a IRS 501(c)(3) public charity. Our purpose is
+                                to support the growth and education about The World's Most Advanced Open Source Database in the United States. 
+                            </p>
+                            <footer>
+                                <a href="#" class="button special">More</a>
+                            </footer>
+                        </article>
+                        <article>
+                            <header>
+                                <h3>membership</h3>
+                            </header>
+                            <p>
+                                Our purpose is to support the growth and education about The World's Most Advanced Open Source Database in the United States.
+                            <br>
+                                By becoming a member you will be able to influence and help how we support that growth and education.
+                            </p>
+                            <footer>
+                                <a href="#" class="button special">More</a>
+                            </footer>
+                        </article>
+                        <article>
+                            <header>
+                                <h3>upcoming events</h3>
+                            </header>
+                            <ul>
+			      {%for event in events %}
+			         <li><a href="/events/{{event.id}}">{{event.title}}</a></li>
+			      {%endfor%}
+                            </ul>
+                            <footer>
+                                <a href="/events" class="button special">More</a>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News -->
+                <section id="three" class="wrapper special style3">
+                    <div class="inner">
+                        <header class="align-center">
+                            <h2>News</h2>
+                            <p>Latest PostgreSQL.US News</p>
+                        </header>
+                        <div class="flex flex-2">
+                            <article>
+                                <div class="image fit">
+                                    <img src="media/images/pic01.jpg" alt="Pic 01" />
+                                </div>
+                                <header>
+                                    <h3>{{news.0.title}}</h3>
+                                </header>
+                                <p>{{news.0.summary|markdown|truncatewords:50}}</p>
+                                <footer>
+                                    <a href="/news" class="button special">More</a>
+                                </footer>
+                            </article>
+                            <article>
+                                <header>
+                                    <h3>recent news posts</h3></br>
+                                    <ul class="alt">
+				    	{%for newsitem in news %}
+                                        <li>{{newsitem.title}}</li>
+					{%endfor%}
+                                    </ul>
+                                </header>
+                                <footer>
+                                    <a href="/news" class="button special">More</a>
+                                </footer>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+        <!-- Team -->
+            <section id="two" class="wrapper style1 special">
+                <div class="inner">
+                    <header>
+                        <h2>our team</h2>
+                        <p>because they make the magic happen</p>
+                    </header>
+                    <div class="flex flex-4">
+                        <div class="box person">
+                            <div class="image round">
+                                <img src="media/images/a1.jpg" alt="Person 1" />
+                            </div>
+                            <h3>mr. waffles</h3>
+                            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus 
+                        </div>
+                        <div class="box person">
+                            <div class="image round">
+                                <img src="media/images/a2.jpg" alt="Person 2" />
+                            </div>
+                            <h3>snookles mcmuffin</h3>
+                            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus 
+                        </div>
+                        <div class="box person">
+                            <div class="image round">
+                                <img src="media/images/a3.jpg" alt="Person 3" />
+                            </div>
+                            <h3>fido mcnotfido</h3>
+                            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus 
+                        </div>
+                        <div class="box person">
+                            <div class="image round">
+                                <img src="media/images/a4.jpg" alt="Person 4" />
+                            </div>
+                            <h3>schrodinger</h3>
+                            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus 
+                        </div>
+                    </div>
+                    <div class="flex flex-3">
+                        <div class="box person">
+                            <div class="image round">
+                                <img src="media/images/a5.jpg" alt="Person 1" />
+                            </div>
+                            <h3>cat woman</h3>
+                            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus 
+                        </div>
+                        <div class="box person">
+                            <div class="image round">
+                                <img src="media/images/a6.jpg" alt="Person 2" />
+                            </div>
+                            <h3>fluffy mcfluffles</h3>
+                            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus 
+                        </div>
+                        <div class="box person">
+                            <div class="image round">
+                                <img src="media/images/a7.jpg" alt="Person 3" />
+                            </div>
+                            <h3>ninja muffin</h3>
+                            <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus 
+                        </div>
+                    </div>
+                </div>
+            </section>
+{%endblock%}
