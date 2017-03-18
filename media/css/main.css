@@ -1769,7 +1769,7 @@
 	}
 
 	.inner {
-		max-width: 75em;
+		max-width: 80em;
 		margin: 0 auto;
 	}
 
@@ -1949,7 +1949,7 @@
 			}
 
 		.flex.flex-4 .box {
-			width: 21%;
+			width: 31.5%;
 		}
 
 		.flex.flex-3 .box {
@@ -2245,7 +2245,7 @@
 			}
 
 				.box.person .image img {
-					max-width: 80%;
+					max-width: 40%;
 					margin: auto;
 				}
 
