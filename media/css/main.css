@@ -2245,7 +2245,7 @@
 			}
 
 				.box.person .image img {
-					max-width: 40%;
+					width: 8em;
 					margin: auto;
 				}
 
