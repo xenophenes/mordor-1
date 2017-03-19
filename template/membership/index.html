@@ -3,7 +3,7 @@
 {%block layoutblock%}
             <section id="three" class="wrapper">
                 <div class="inner">
-                            <header class="align-center"> 
+                            <header class="align-center">
                                 <h2>your membership</h2>
                             </header>
 {%if not registration_complete%}
@@ -16,7 +16,7 @@ you are uncertain about anything feel free to <a href="/contactus/">contact us</
 
 <p>
 Once you have registered, you will be able to generate an invoice for your
-membership fee.
+membership fee of $25.
 <i>Your membership is not active until you have paid the fee!</i>
 </p>
 <p>
@@ -27,18 +27,18 @@ will not be valid even if it is fully paid.
 
 <form method="post" action=".">{% csrf_token%}
 {% if form.errors %}
-<p><b>Note! This form contains errors and has not been saved!</b></p>
+<p><b style="color:red;">Note! This form contains errors and has not been saved!</b></p>
 {% endif %}
 
  <fieldset id="personal_information">
-   <legend>Personal information</legend>
+   <legend><h3>Personal information ---</h3></legend>
       <div{% if form.fullname.errors %} class="errfld"{% endif %}>
-       {{ form.fullname.label_tag }} <br/>
+       {{ form.fullname.label_tag }}
         {{ form.fullname }} {% if form.fullname.errors %}{{ form.fullname.errors}}{% endif %}
       </div>
 
       <div{% if form.country.errors %} class="errfld"{% endif %}>
-       {{ form.country.label_tag }} <br/>
+       {{ form.country.label_tag }}
         {{ form.country }} {% if form.country.errors %}{{ form.country.errors}}{% endif %}
       </div>
 
@@ -50,7 +50,7 @@ will not be valid even if it is fully paid.
 
 {%if registration_complete%}
   <fieldset id="membership_status">
-   <legend>Membership Status</legend>
+   <legend><h3>Membership Status ---</h3></legend>
 <div id="membershipinfo">
 {%if member.membersince %}
 You have been a member since {{member.membersince}}.<br/>
