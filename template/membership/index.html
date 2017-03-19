@@ -31,15 +31,15 @@ will not be valid even if it is fully paid.
 {% endif %}
 
  <fieldset id="personal_information">
-   <legend><h3>Personal information ---</h3></legend><br>
+   <legend><h3>Personal information ---</h3></legend>
       <div{% if form.fullname.errors %} class="errfld"{% endif %}>
        {{ form.fullname.label_tag }}
-        {{ form.fullname }} {% if form.fullname.errors %}{{ form.fullname.errors}}{% endif %} <br/>
+        {{ form.fullname }} {% if form.fullname.errors %}{{ form.fullname.errors}}{% endif %}
       </div>
 
       <div{% if form.country.errors %} class="errfld"{% endif %}>
        {{ form.country.label_tag }}
-        {{ form.country }} {% if form.country.errors %}{{ form.country.errors}}{% endif %} <br/>
+        {{ form.country }} {% if form.country.errors %}{{ form.country.errors}}{% endif %}
       </div>
 
       <div{% if form.listed.errors %} class="errfld"{% endif %}>
@@ -50,7 +50,7 @@ will not be valid even if it is fully paid.
 
 {%if registration_complete%}
   <fieldset id="membership_status">
-   <legend>Membership Status</legend>
+   <legend><h3>Membership Status ---</h3></legend>
 <div id="membershipinfo">
 {%if member.membersince %}
 You have been a member since {{member.membersince}}.<br/>

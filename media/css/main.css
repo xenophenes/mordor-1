@@ -49,6 +49,10 @@
 		-webkit-text-size-adjust: none;
 	}
 
+	legend h3 {
+		padding-bottom: 1em;
+	}
+
 /* Box Model */
 
 	*, *:before, *:after {
@@ -2099,6 +2103,7 @@
 	input[type="email"],
 	select {
 		height: 2.75em;
+		margin-bottom: 1em;
 	}
 
 	textarea {
@@ -2129,6 +2134,7 @@
 			font-weight: 300;
 			padding-left: 2.4em;
 			padding-right: 0.75em;
+			margin: 1em 0;
 			position: relative;
 		}
 
@@ -2611,6 +2617,7 @@
 		height: 2.85em;
 		line-height: 2.95em;
 		padding: 0 1.5em;
+		margin: 2em 0;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
