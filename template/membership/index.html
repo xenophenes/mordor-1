@@ -48,39 +48,39 @@ will not be valid even if it is fully paid.
       </div>
   </fieldset>
 
-{%if registration_complete%}
+{%if registration_complete%}<br>
   <fieldset id="membership_status">
-   <br><legend><h3>Membership Status ---</h3></legend>
-<div id="membershipinfo">
-{%if member.membersince %}
-You have been a member since {{member.membersince}}.<br/>
-{%endif%}
-{%if member.paiduntil %}
- {%if member.expiressoon %}
-Your membership is currently active but will expire in {{member.paiduntil|timeuntil}} on {{member.paiduntil}}.
- {%else%}
-Your membership and payment has been registered, and will expire on {{member.paiduntil}}.
- {%endif%}
-{%else%}
-Your membership will become active once you have paid the fee.
-{%endif%}
-</div>
-{%if member.expiressoon%}
-<div id="paymentdiv">
-{%if member.activeinvoice%}
-{%include "invoices/userinvoice_spec.html"%}
-{%else%}
-<p>
-To pay or renew your membership, please use the button below to generate an
-invoice. You can then pay this invoice using several different methods.
-</p>
-<p>
-Once you have completed your payment, it may take up to 24 hours before the payment shows
-up in this system.
-</p>
-{%endif%}{%comment%}invoice or not{%endcomment%}
-</div>
-{%endif%}{%comment%}member.expiressoon{%endcomment%}
+    <legend><h3>Membership Status ---</h3></legend>
+    <div id="membershipinfo">
+    {%if member.membersince %}
+    You have been a member since {{member.membersince}}.<br/>
+    {%endif%}
+    {%if member.paiduntil %}
+     {%if member.expiressoon %}
+    Your membership is currently active but will expire in {{member.paiduntil|timeuntil}} on {{member.paiduntil}}.
+     {%else%}
+    Your membership and payment has been registered, and will expire on {{member.paiduntil}}.
+     {%endif%}
+    {%else%}
+    Your membership will become active once you have paid the fee.
+    {%endif%}
+    </div>
+    {%if member.expiressoon%}
+    <div id="paymentdiv">
+    {%if member.activeinvoice%}
+    {%include "invoices/userinvoice_spec.html"%}
+    {%else%}
+    <p>
+    To pay or renew your membership, please use the button below to generate an
+    invoice. You can then pay this invoice using several different methods.
+    </p>
+    <p>
+    Once you have completed your payment, it may take up to 24 hours before the payment shows
+    up in this system.
+    </p>
+    {%endif%}{%comment%}invoice or not{%endcomment%}
+    </div>
+    {%endif%}{%comment%}member.expiressoon{%endcomment%}
   </fieldset>
 {%endif%}{%comment%}registration_complete{%endcomment%}
 
