@@ -4,18 +4,18 @@
 {%block layoutblock%}
             <!-- News -->
                 <section id="three" class="wrapper special style3">
-                    <div class="inner">
-                        <header class="align-center">
-                            <h2>News</h2>
-                            <p>Latest PostgreSQL.US News</p>
+                    <div class="inner" id="news">
+                      <header>
+                        <h2>News</h2>
+                        <p>Latest PostgreSQL.US News</p>
+                      </header>
+	    	              {%for newsitem in news %}
+                        <header>
+                            <h3>{{newsitem.title}}</h3>
                         </header>
-		    	{%for newsitem in news %}
-                                <header>
-                                    <h3>{{newsitem.title}}</h3>
-                                </header>
-                                <p>{{newsitem.summary|markdown}}</p>
-                            </article>
-			{%endfor%}
+                        <p>{{newsitem.summary|markdown}}</p>
+                        <hr>
+		                  {%endfor%}
                     </div>
                 </section>
 {%endblock%}
