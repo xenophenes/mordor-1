@@ -58,24 +58,21 @@
                         </header>
                         <div class="flex flex-2">
                             <article>
-                                <div class="image fit">
-                                    <img src="media/images/pic01.jpg" alt="Pic 01" />
-                                </div>
                                 <header>
                                     <h3>{{news.0.title}}</h3>
                                 </header>
-                                <p>{{news.0.summary|markdown|truncatewords:50}}</p>
+                                <p>{{news.0.summary|markdown|truncatewords:50}}</p><br><br>
                                 <footer>
                                     <a href="/news" class="button special">More</a>
                                 </footer>
                             </article>
                             <article>
                                 <header>
-                                    <h3>recent news posts</h3></br>
+                                    <h3>recent news posts</h3>
                                     <ul class="alt">
-				    	{%for newsitem in news %}
+                        				    	{%for newsitem in news %}
                                         <li>{{newsitem.title}}</li>
-					{%endfor%}
+                            					{%endfor%}
                                     </ul>
                                 </header>
                                 <footer>
