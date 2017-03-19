@@ -2230,6 +2230,10 @@
 			padding: 1em;
 		}
 
+		.box.person.center {
+			margin: auto;
+		}
+
 			.box.person h3 {
 				margin: 0;
 				font-size: 1.2em;
